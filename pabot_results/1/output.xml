@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211217 21:00:08.016" rpa="false" schemaversion="2">
+<suite id="s1" name="TC shop" source="C:\Users\JEET BISWAS\PycharmProjects\ConfigureAutomation\Page_object_Factory\Test_Cases\TC_shop.robot">
+<test id="s1-t1" name="TC 2: User Add required products into the cart">
+<kw name="User navigates to initiate the browser session" library="product_resource" type="SETUP">
+<arg>Chrome</arg>
+<kw name="User navigates to the homepage in the browser" library="GenericData">
+<arg>${browser_name}</arg>
+<arg>${url}</arg>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser_name}</arg>
+<arg>executable_path=Page_object_Factory/Page_objects/${browser_name}_driver</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20211217 21:00:08.227" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20211217 21:00:08.226" endtime="20211217 21:00:10.058"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211217 21:00:10.059" level="INFO">Opening url 'https://rahulshettyacademy.com/angularpractice/shop'</msg>
+<status status="PASS" starttime="20211217 21:00:10.059" endtime="20211217 21:00:12.241"/>
+</kw>
+<status status="PASS" starttime="20211217 21:00:08.225" endtime="20211217 21:00:12.243"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211217 21:00:12.243" endtime="20211217 21:00:12.366"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20211217 21:00:12.366" endtime="20211217 21:00:12.369"/>
+</kw>
+<status status="PASS" starttime="20211217 21:00:08.225" endtime="20211217 21:00:12.369"/>
+</kw>
+<kw name="Given user validates the title of the page" library="GenericData">
+<arg>${Test_expected_title}</arg>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${expected_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211217 21:00:12.381" level="INFO">Page title is 'ProtoCommerce'.</msg>
+<status status="PASS" starttime="20211217 21:00:12.370" endtime="20211217 21:00:12.382"/>
+</kw>
+<status status="PASS" starttime="20211217 21:00:12.370" endtime="20211217 21:00:12.382"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211217 21:00:17.390" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211217 21:00:12.382" endtime="20211217 21:00:17.390"/>
+</kw>
+<kw name="When User adds the required product in the cart" library="product_resource">
+<arg>@{Required_Products}</arg>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${All_Products_elements}</var>
+<arg>${Locator_All_product_title}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20211217 21:00:17.411" level="INFO">${All_Products_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="371dbe4fa7106c9f0baf8a84058fd02b", element="625e1f76-2f6e-4ba2-9d85-8fd38435954e")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20211217 21:00:17.392" endtime="20211217 21:00:17.411"/>
+</kw>
+<for flavor="IN">
+<var>${Product_element}</var>
+<value>@{All_Products_elements}</value>
+<iter>
+<var name="${Product_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="371dbe4fa7106c9f0baf8a84058fd02b", element="625e1f76-2f6e-4ba2-9d85-8fd38435954e")&gt;</var>
+<kw name="Get Index From List" library="Collections">
+<var>${Product_index}</var>
+<arg>${All_Products_elements}</arg>
+<arg>${Product_element}</arg>
+<doc>Returns the index of the first occurrence of the ``value`` on the list.</doc>
+<msg timestamp="20211217 21:00:17.414" level="INFO">${Product_index} = 0</msg>
+<status status="PASS" starttime="20211217 21:00:17.413" endtime="20211217 21:00:17.414"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Product_name}</var>
+<arg>${Product_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20211217 21:00:17.428" level="INFO">${Product_name} = iphone X</msg>
+<status status="PASS" starttime="20211217 21:00:17.414" endtime="20211217 21:00:17.428"/>
+</kw>
+<for flavor="IN">
+<var>${Required_product}</var>
+<value>@{ProductList}</value>
+<iter>
+<var name="${Required_product}">iphone X</var>
+<if>
+<branch type="IF" condition="'${Product_name}' == '${Required_product}'">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:(//div[@class='card h-100']/div[2]/button)[${Product_index}+1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211217 21:00:17.431" level="INFO">Clicking element 'xpath:(//div[@class='card h-100']/div[2]/button)[0+1]'.</msg>
+<status status="PASS" starttime="20211217 21:00:17.430" endtime="20211217 21:00:17.481"/>
+</kw>
+<status status="PASS" starttime="20211217 21:00:17.429" endtime="20211217 21:00:17.481"/>
+</branch>
+<status status="PASS" starttime="20211217 21:00:17.429" endtime="20211217 21:00:17.481"/>
+</if>
+<status status="PASS" starttime="20211217 21:00:17.429" endtime="20211217 21:00:17.481"/>
+</iter>
+<iter>
+<var name="${Required_product}">Samsung Note 8</var>
+<if>
+<branch type="IF" condition="'${Product_name}' == '${Required_product}'">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:(//div[@class='card h-100']/div[2]/button)[${Product_index}+1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211217 21:00:17.482" endtime="20211217 21:00:17.483"/>
+</kw>
+<status status="NOT RUN" starttime="20211217 21:00:17.482" endtime="20211217 21:00:17.483"/>
+</branch>
+<status status="PASS" starttime="20211217 21:00:17.482" endtime="20211217 21:00:17.483"/>
+</if>
+<status status="PASS" starttime="20211217 21:00:17.482" endtime="20211217 21:00:17.483"/>
+</iter>
+<iter>
+<var name="${Required_product}">Nokia Edge</var>
+<if>
+<branch type="IF" condition="'${Product_name}' == '${Required_product}'">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:(//div[@class='card h-100']/div[2]/button)[${Product_index}+1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211217 21:00:17.483" endtime="20211217 21:00:17.483"/>
+</kw>
+<status status="NOT RUN" starttime="20211217 21:00:17.483" endtime="20211217 21:00:17.483"/>
+</branch>
+<status status="PASS" starttime="20211217 21:00:17.483" endtime="20211217 21:00:17.483"/>
+</if>
+<status status="PASS" starttime="20211217 21:00:17.483" endtime="20211217 21:00:17.483"/>
+</iter>
+<status status="PASS" starttime="20211217 21:00:17.428" endtime="20211217 21:00:17.484"/>
+</for>
+<status status="PASS" starttime="20211217 21:00:17.412" endtime="20211217 21:00:17.484"/>
+</iter>
+<iter>
+<var name="${Product_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="371dbe4fa7106c9f0baf8a84058fd02b", element="0fe3de06-7412-4b38-bf6c-7e2b1130e19c")&gt;</var>
+<kw name="Get Index From List" library="Collections">
+<var>${Product_index}</var>
+<arg>${All_Products_elements}</arg>
+<arg>${Product_element}</arg>
+<doc>Returns the index of the first occurrence of the ``value`` on the list.</doc>
+<msg timestamp="20211217 21:00:17.487" level="INFO">${Product_index} = 1</msg>
+<status status="PASS" starttime="20211217 21:00:17.485" endtime="20211217 21:00:17.487"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Product_name}</var>
+<arg>${Product_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20211217 21:00:17.502" level="INFO">${Product_name} = Samsung Note 8</msg>
+<status status="PASS" starttime="20211217 21:00:17.487" endtime="20211217 21:00:17.502"/>
+</kw>
+<for flavor="IN">
+<var>${Required_product}</var>
+<value>@{ProductList}</value>
+<iter>
+<var name="${Required_product}">iphone X</var>
+<if>
+<branch type="IF" condition="'${Product_name}' == '${Required_product}'">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:(//div[@class='card h-100']/div[2]/button)[${Product_index}+1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211217 21:00:17.506" endtime="20211217 21:00:17.506"/>
+</kw>
+<status status="NOT RUN" starttime="20211217 21:00:17.505" endtime="20211217 21:00:17.506"/>
+</branch>
+<status status="PASS" starttime="20211217 21:00:17.504" endtime="20211217 21:00:17.506"/>
+</if>
+<status status="PASS" starttime="20211217 21:00:17.504" endtime="20211217 21:00:17.506"/>
+</iter>
+<iter>
+<var name="${Required_product}">Samsung Note 8</var>
+<if>
+<branch type="IF" condition="'${Product_name}' == '${Required_product}'">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:(//div[@class='card h-100']/div[2]/button)[${Product_index}+1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211217 21:00:17.508" level="INFO">Clicking element 'xpath:(//div[@class='card h-100']/div[2]/button)[1+1]'.</msg>
+<status status="PASS" starttime="20211217 21:00:17.507" endtime="20211217 21:00:17.555"/>
+</kw>
+<status status="PASS" starttime="20211217 21:00:17.507" endtime="20211217 21:00:17.555"/>
+</branch>
+<status status="PASS" starttime="20211217 21:00:17.506" endtime="20211217 21:00:17.555"/>
+</if>
+<status status="PASS" starttime="20211217 21:00:17.506" endtime="20211217 21:00:17.555"/>
+</iter>
+<iter>
+<var name="${Required_product}">Nokia Edge</var>
+<if>
+<branch type="IF" condition="'${Product_name}' == '${Required_product}'">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:(//div[@class='card h-100']/div[2]/button)[${Product_index}+1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211217 21:00:17.556" endtime="20211217 21:00:17.557"/>
+</kw>
+<status status="NOT RUN" starttime="20211217 21:00:17.556" endtime="20211217 21:00:17.557"/>
+</branch>
+<status status="PASS" starttime="20211217 21:00:17.556" endtime="20211217 21:00:17.557"/>
+</if>
+<status status="PASS" starttime="20211217 21:00:17.556" endtime="20211217 21:00:17.557"/>
+</iter>
+<status status="PASS" starttime="20211217 21:00:17.502" endtime="20211217 21:00:17.557"/>
+</for>
+<status status="PASS" starttime="20211217 21:00:17.484" endtime="20211217 21:00:17.557"/>
+</iter>
+<iter>
+<var name="${Product_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="371dbe4fa7106c9f0baf8a84058fd02b", element="bcb7231a-4b06-4394-854e-1822a36568ee")&gt;</var>
+<kw name="Get Index From List" library="Collections">
+<var>${Product_index}</var>
+<arg>${All_Products_elements}</arg>
+<arg>${Product_element}</arg>
+<doc>Returns the index of the first occurrence of the ``value`` on the list.</doc>
+<msg timestamp="20211217 21:00:17.558" level="INFO">${Product_index} = 2</msg>
+<status status="PASS" starttime="20211217 21:00:17.557" endtime="20211217 21:00:17.558"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Product_name}</var>
+<arg>${Product_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20211217 21:00:17.572" level="INFO">${Product_name} = Nokia Edge</msg>
+<status status="PASS" starttime="20211217 21:00:17.558" endtime="20211217 21:00:17.573"/>
+</kw>
+<for flavor="IN">
+<var>${Required_product}</var>
+<value>@{ProductList}</value>
+<iter>
+<var name="${Required_product}">iphone X</var>
+<if>
+<branch type="IF" condition="'${Product_name}' == '${Required_product}'">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:(//div[@class='card h-100']/div[2]/button)[${Product_index}+1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211217 21:00:17.574" endtime="20211217 21:00:17.575"/>
+</kw>
+<status status="NOT RUN" starttime="20211217 21:00:17.574" endtime="20211217 21:00:17.575"/>
+</branch>
+<status status="PASS" starttime="20211217 21:00:17.574" endtime="20211217 21:00:17.575"/>
+</if>
+<status status="PASS" starttime="20211217 21:00:17.573" endtime="20211217 21:00:17.575"/>
+</iter>
+<iter>
+<var name="${Required_product}">Samsung Note 8</var>
+<if>
+<branch type="IF" condition="'${Product_name}' == '${Required_product}'">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:(//div[@class='card h-100']/div[2]/button)[${Product_index}+1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211217 21:00:17.576" endtime="20211217 21:00:17.576"/>
+</kw>
+<status status="NOT RUN" starttime="20211217 21:00:17.576" endtime="20211217 21:00:17.576"/>
+</branch>
+<status status="PASS" starttime="20211217 21:00:17.575" endtime="20211217 21:00:17.576"/>
+</if>
+<status status="PASS" starttime="20211217 21:00:17.575" endtime="20211217 21:00:17.577"/>
+</iter>
+<iter>
+<var name="${Required_product}">Nokia Edge</var>
+<if>
+<branch type="IF" condition="'${Product_name}' == '${Required_product}'">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:(//div[@class='card h-100']/div[2]/button)[${Product_index}+1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211217 21:00:17.578" level="INFO">Clicking element 'xpath:(//div[@class='card h-100']/div[2]/button)[2+1]'.</msg>
+<status status="PASS" starttime="20211217 21:00:17.578" endtime="20211217 21:00:17.629"/>
+</kw>
+<status status="PASS" starttime="20211217 21:00:17.577" endtime="20211217 21:00:17.629"/>
+</branch>
+<status status="PASS" starttime="20211217 21:00:17.577" endtime="20211217 21:00:17.629"/>
+</if>
+<status status="PASS" starttime="20211217 21:00:17.577" endtime="20211217 21:00:17.629"/>
+</iter>
+<status status="PASS" starttime="20211217 21:00:17.573" endtime="20211217 21:00:17.629"/>
+</for>
+<status status="PASS" starttime="20211217 21:00:17.557" endtime="20211217 21:00:17.629"/>
+</iter>
+<iter>
+<var name="${Product_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="371dbe4fa7106c9f0baf8a84058fd02b", element="a83d0477-7a53-43fc-87e4-3d1240c6acb1")&gt;</var>
+<kw name="Get Index From List" library="Collections">
+<var>${Product_index}</var>
+<arg>${All_Products_elements}</arg>
+<arg>${Product_element}</arg>
+<doc>Returns the index of the first occurrence of the ``value`` on the list.</doc>
+<msg timestamp="20211217 21:00:17.630" level="INFO">${Product_index} = 3</msg>
+<status status="PASS" starttime="20211217 21:00:17.630" endtime="20211217 21:00:17.630"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Product_name}</var>
+<arg>${Product_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20211217 21:00:17.645" level="INFO">${Product_name} = Blackberry</msg>
+<status status="PASS" starttime="20211217 21:00:17.630" endtime="20211217 21:00:17.645"/>
+</kw>
+<for flavor="IN">
+<var>${Required_product}</var>
+<value>@{ProductList}</value>
+<iter>
+<var name="${Required_product}">iphone X</var>
+<if>
+<branch type="IF" condition="'${Product_name}' == '${Required_product}'">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:(//div[@class='card h-100']/div[2]/button)[${Product_index}+1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211217 21:00:17.646" endtime="20211217 21:00:17.646"/>
+</kw>
+<status status="NOT RUN" starttime="20211217 21:00:17.646" endtime="20211217 21:00:17.646"/>
+</branch>
+<status status="PASS" starttime="20211217 21:00:17.646" endtime="20211217 21:00:17.646"/>
+</if>
+<status status="PASS" starttime="20211217 21:00:17.645" endtime="20211217 21:00:17.646"/>
+</iter>
+<iter>
+<var name="${Required_product}">Samsung Note 8</var>
+<if>
+<branch type="IF" condition="'${Product_name}' == '${Required_product}'">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:(//div[@class='card h-100']/div[2]/button)[${Product_index}+1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211217 21:00:17.647" endtime="20211217 21:00:17.647"/>
+</kw>
+<status status="NOT RUN" starttime="20211217 21:00:17.647" endtime="20211217 21:00:17.647"/>
+</branch>
+<status status="PASS" starttime="20211217 21:00:17.646" endtime="20211217 21:00:17.647"/>
+</if>
+<status status="PASS" starttime="20211217 21:00:17.646" endtime="20211217 21:00:17.647"/>
+</iter>
+<iter>
+<var name="${Required_product}">Nokia Edge</var>
+<if>
+<branch type="IF" condition="'${Product_name}' == '${Required_product}'">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:(//div[@class='card h-100']/div[2]/button)[${Product_index}+1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211217 21:00:17.648" endtime="20211217 21:00:17.648"/>
+</kw>
+<status status="NOT RUN" starttime="20211217 21:00:17.648" endtime="20211217 21:00:17.648"/>
+</branch>
+<status status="PASS" starttime="20211217 21:00:17.648" endtime="20211217 21:00:17.648"/>
+</if>
+<status status="PASS" starttime="20211217 21:00:17.647" endtime="20211217 21:00:17.648"/>
+</iter>
+<status status="PASS" starttime="20211217 21:00:17.645" endtime="20211217 21:00:17.648"/>
+</for>
+<status status="PASS" starttime="20211217 21:00:17.630" endtime="20211217 21:00:17.648"/>
+</iter>
+<status status="PASS" starttime="20211217 21:00:17.411" endtime="20211217 21:00:17.648"/>
+</for>
+<status status="PASS" starttime="20211217 21:00:17.391" endtime="20211217 21:00:17.649"/>
+</kw>
+<kw name="Then User validates that all the desired products has been successfully added into the cart" library="product_resource">
+<arg>@{Required_Products}</arg>
+<kw name="Get Length" library="BuiltIn">
+<var>${length_of_reuired_product_list}</var>
+<arg>${expectes_poduct_list_displayed}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20211217 21:00:17.649" level="INFO">Length is 3</msg>
+<msg timestamp="20211217 21:00:17.649" level="INFO">${length_of_reuired_product_list} = 3</msg>
+<status status="PASS" starttime="20211217 21:00:17.649" endtime="20211217 21:00:17.649"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Button_text}</var>
+<arg>css:a.nav-link.btn.btn-primary</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20211217 21:00:17.676" level="INFO">${Button_text} = Checkout ( 3 )
+(current)</msg>
+<status status="PASS" starttime="20211217 21:00:17.650" endtime="20211217 21:00:17.676"/>
+</kw>
+<kw name="Split String From Right" library="String">
+<var>${Actual_text_trimmed}</var>
+<arg>${Button_text}</arg>
+<arg>(current)</arg>
+<doc>Splits the ``string`` using ``separator`` starting from right.</doc>
+<msg timestamp="20211217 21:00:17.677" level="INFO">${Actual_text_trimmed} = ['Checkout ( 3 )\n', '']</msg>
+<status status="PASS" starttime="20211217 21:00:17.676" endtime="20211217 21:00:17.677"/>
+</kw>
+<kw name="Strip String" library="String">
+<var>${Actual_text}</var>
+<arg>${Actual_text_trimmed[0]}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<msg timestamp="20211217 21:00:17.678" level="INFO">${Actual_text} = Checkout ( 3 )</msg>
+<status status="PASS" starttime="20211217 21:00:17.677" endtime="20211217 21:00:17.678"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Actual_text}</arg>
+<arg>Checkout ( ${length_of_reuired_product_list} )</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20211217 21:00:17.679" endtime="20211217 21:00:17.679"/>
+</kw>
+<status status="PASS" starttime="20211217 21:00:17.649" endtime="20211217 21:00:17.679"/>
+</kw>
+<kw name="CLose Browwer Session" library="GenericData" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211217 21:00:17.680" endtime="20211217 21:00:19.891"/>
+</kw>
+<status status="PASS" starttime="20211217 21:00:17.680" endtime="20211217 21:00:19.892"/>
+</kw>
+<status status="PASS" starttime="20211217 21:00:08.224" endtime="20211217 21:00:19.892"/>
+</test>
+<status status="PASS" starttime="20211217 21:00:08.025" endtime="20211217 21:00:19.894"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC shop">TC shop</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

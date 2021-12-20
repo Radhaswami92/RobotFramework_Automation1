@@ -1,0 +1,6 @@
+datasources:3e0d82675892f4687433ab6928e0c0e279d339a3
+commandlineoptions:65f95c924ba97541f47949701c4e3c51192a5b43
+suitesfrom:no-suites-from-option
+file:13f67cc79f2026e50ea252493fd80cdb2ae661c3
+--test TC shop.TC 1: User searches for the relevant products and validates the product titles and price is displayed
+--test TC shop.TC 2: User Add required products into the cart

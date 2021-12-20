@@ -1,0 +1,136 @@
+1639743152986	geckodriver	INFO	Listening on 127.0.0.1:54105
+1639743156058	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54106" "-no-remote" "-profile" "C:\\Users\\JEETBI~1\\AppData\\Local\\Temp\\rust_mozprofile8uMFdj"
+1639743156859	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\JEET BISWAS\\AppData\\Local\\Temp\\rust_mozprofile8uMFdj\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54106/devtools/browser/69a20739-f23d-4957-89d8-75f6cbefa20a
+1639743159761	Marionette	INFO	Listening on port 54114
+1639743159807	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639743162424	Marionette	INFO	Stopped listening on port 54114
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "UpdateManager: writing update xml data"
+JavaScript error: resource://gre/modules/UpdateService.jsm, line 5560: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Phase "profile-before-change" is finished, it is too late to register completion condition "UpdateManager: writing update xml data"" {file: "resource://gre/modules/AsyncShutdown.jsm" line: 718}]'[JavaScript Error: "Phase "profile-before-change" is finished, it is too late to register completion condition "UpdateManager: writing update xml data"" {file: "resource://gre/modules/AsyncShutdown.jsm" line: 718}]' when calling method: [nsIUpdateManager::saveUpdates]
+1639831925381	geckodriver	INFO	Listening on 127.0.0.1:61864
+1639831928426	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61865" "-no-remote" "-profile" "C:\\Users\\JEETBI~1\\AppData\\Local\\Temp\\rust_mozprofile9wNlu3"
+1639831929152	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\JEET BISWAS\\AppData\\Local\\Temp\\rust_mozprofile9wNlu3\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61865/devtools/browser/dfc3417d-8ee0-4d23-96e0-bce03168fe95
+1639831931521	Marionette	INFO	Listening on port 61872
+1639831931601	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639831935386	Marionette	INFO	Stopped listening on port 61872
+1639831936600	geckodriver	INFO	Listening on 127.0.0.1:61923
+1639831939624	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61924" "-no-remote" "-profile" "C:\\Users\\JEETBI~1\\AppData\\Local\\Temp\\rust_mozprofileBC09Vy"
+1639831940465	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\JEET BISWAS\\AppData\\Local\\Temp\\rust_mozprofileBC09Vy\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61924/devtools/browser/5ad77251-54af-4eee-9050-14bc668264b3
+1639831942569	Marionette	INFO	Listening on port 61932
+1639831942911	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639831952051	Marionette	INFO	Stopped listening on port 61932
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639831952822	geckodriver	INFO	Listening on 127.0.0.1:61993
+1639831955846	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61994" "-no-remote" "-profile" "C:\\Users\\JEETBI~1\\AppData\\Local\\Temp\\rust_mozprofileOduIDs"
+1639831956228	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\JEET BISWAS\\AppData\\Local\\Temp\\rust_mozprofileOduIDs\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61994/devtools/browser/13bd705d-0c70-48e3-936b-336fa3e07bcd
+1639831958238	Marionette	INFO	Listening on port 62000
+1639831958532	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1639831967656	Marionette	INFO	Stopped listening on port 62000
+1639831968284	geckodriver	INFO	Listening on 127.0.0.1:62067
+1639831971339	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62068" "-no-remote" "-profile" "C:\\Users\\JEETBI~1\\AppData\\Local\\Temp\\rust_mozprofileWxi2QH"
+1639831971646	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\JEET BISWAS\\AppData\\Local\\Temp\\rust_mozprofileWxi2QH\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62068/devtools/browser/d5fa0fc4-3b5f-41c0-8314-56c6537ab73b
+1639831973645	Marionette	INFO	Listening on port 62075
+1639831974007	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1639831987217	Marionette	INFO	Stopped listening on port 62075
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639832023892	geckodriver	INFO	Listening on 127.0.0.1:62159
+1639832026955	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62160" "-no-remote" "-profile" "C:\\Users\\JEETBI~1\\AppData\\Local\\Temp\\rust_mozprofilenSVHBF"
+1639832027279	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\JEET BISWAS\\AppData\\Local\\Temp\\rust_mozprofilenSVHBF\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62160/devtools/browser/c473ef19-440e-482d-8015-6bf89c8fb0e9
+1639832029425	Marionette	INFO	Listening on port 62166
+1639832029641	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639832034203	Marionette	INFO	Stopped listening on port 62166
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639846534899	geckodriver	INFO	Listening on 127.0.0.1:63383
+1639846538017	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63384" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofileK8gr4F"
+1639846539072	Marionette	INFO	Marionette enabled
+[GFX1-]: RcANGLE(no compositor window)
+[GFX1-]: Failed to connect WebRenderBridgeChild.
+[GFX1-]: Fallback WR to SW-WR + D3D11
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Windows\\Temp\\rust_mozprofileK8gr4F\\search.json.mozlz4", (void 0)))
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+DevTools listening on ws://localhost:63384/devtools/browser/91aa6fe8-08c3-4c0a-83fc-82c6933375f5
+1639846541586	Marionette	INFO	Listening on port 63390
+1639846541730	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639846544483	Marionette	INFO	Stopped listening on port 63390
+1639846545816	geckodriver	INFO	Listening on 127.0.0.1:63442
+1639846548912	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63443" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofilebpF91K"
+1639846549653	Marionette	INFO	Marionette enabled
+[GFX1-]: RcANGLE(no compositor window)
+[GFX1-]: Failed to connect WebRenderBridgeChild.
+[GFX1-]: Fallback WR to SW-WR + D3D11
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Windows\\Temp\\rust_mozprofilebpF91K\\search.json.mozlz4", (void 0)))
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+DevTools listening on ws://localhost:63443/devtools/browser/85ebbaf7-bdd7-4000-9a29-6720c52eb5a5
+1639846551716	Marionette	INFO	Listening on port 63449
+1639846552121	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639846560203	Marionette	INFO	Stopped listening on port 63449
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639846561639	geckodriver	INFO	Listening on 127.0.0.1:63519
+1639846564704	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63520" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofile3Cc9dn"
+1639846565149	Marionette	INFO	Marionette enabled
+[GFX1-]: RcANGLE(no compositor window)
+[GFX1-]: Failed to connect WebRenderBridgeChild.
+[GFX1-]: Fallback WR to SW-WR + D3D11
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Windows\\Temp\\rust_mozprofile3Cc9dn\\search.json.mozlz4", (void 0)))
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+DevTools listening on ws://localhost:63520/devtools/browser/1b5421b2-e2a4-4cba-aa88-d53568847e2e
+1639846567221	Marionette	INFO	Listening on port 63527
+1639846567408	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1639846576038	Marionette	INFO	Stopped listening on port 63527
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639846577326	geckodriver	INFO	Listening on 127.0.0.1:63590
+1639846580388	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63591" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofileRv7Kaz"
+1639846580811	Marionette	INFO	Marionette enabled
+[GFX1-]: RcANGLE(no compositor window)
+[GFX1-]: Failed to connect WebRenderBridgeChild.
+[GFX1-]: Fallback WR to SW-WR + D3D11
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Windows\\Temp\\rust_mozprofileRv7Kaz\\search.json.mozlz4", (void 0)))
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+DevTools listening on ws://localhost:63591/devtools/browser/77140bc3-95f6-4aec-8459-277de6fbc314
+1639846582954	Marionette	INFO	Listening on port 63598
+1639846583094	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1639846592674	Marionette	INFO	Stopped listening on port 63598
